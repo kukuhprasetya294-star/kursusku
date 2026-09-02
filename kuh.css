@@ -1,0 +1,654 @@
+/* =========================================
+   KURSUSKU - ROBOTIC DARK THEME
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #070b12;
+    --bg-card: #0d141f;
+    --bg-light: #101a27;
+    --border: #1b3548;
+
+    --cyan: #00e5ff;
+    --blue: #008cff;
+    --green: #00ffb3;
+
+    --text: #e6f7ff;
+    --text-muted: #8ca5b5;
+
+    --shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top right, rgba(0, 140, 255, 0.12), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(0, 229, 255, 0.08), transparent 30%),
+        var(--bg-dark);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* Grid futuristik pada background */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(0, 229, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.025) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* =========================================
+   CONTAINER
+   ========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.header {
+    background: linear-gradient(
+        135deg,
+        #05080d,
+        #0a1722
+    );
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 45px 0;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 30px rgba(0, 229, 255, 0.08);
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 5px var(--cyan),
+        0 0 20px rgba(0, 229, 255, 0.6);
+}
+
+.header p {
+    margin-top: 5px;
+
+    color: var(--text-muted);
+
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+
+.navbar {
+    background: rgba(5, 10, 17, 0.95);
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    backdrop-filter: blur(10px);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar a {
+    position: relative;
+
+    display: block;
+
+    padding: 17px 25px;
+
+    color: var(--text-muted);
+
+    text-decoration: none;
+
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.navbar a::before {
+    content: "> ";
+
+    color: var(--cyan);
+
+    opacity: 0;
+
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 10px rgba(0, 229, 255, 0.8);
+}
+
+.navbar a:hover::before {
+    opacity: 1;
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 570px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 229, 255, 0.05),
+            transparent 50%
+        );
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+}
+
+.hero h2 {
+    font-size: 2.7rem;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+}
+
+.hero h2::first-line {
+    color: var(--cyan);
+}
+
+.hero p {
+    color: var(--text-muted);
+
+    max-width: 500px;
+
+    margin-bottom: 30px;
+
+    font-size: 1.05rem;
+}
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+.button {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: transparent;
+
+    border: 1px solid var(--cyan);
+
+    color: var(--cyan);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+
+    box-shadow:
+        0 0 10px rgba(0, 229, 255, 0.15);
+}
+
+.button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    background: var(--cyan);
+
+    transition: 0.3s ease;
+
+    z-index: -1;
+}
+
+.button:hover::before {
+    left: 0;
+}
+
+.button:hover {
+    color: #001018;
+
+    box-shadow:
+        0 0 25px rgba(0, 229, 255, 0.7);
+
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   HERO IMAGE
+   ========================================= */
+
+.hero-image {
+    display: block;
+
+    width: 100%;
+    max-width: 450px;
+
+    margin: auto;
+
+    border: 1px solid var(--border);
+
+    padding: 8px;
+
+    background: #080e16;
+
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, 0.15),
+        0 0 60px rgba(0, 140, 255, 0.08);
+
+    transition: 0.4s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.02);
+
+    border-color: var(--cyan);
+
+    box-shadow:
+        0 0 25px rgba(0, 229, 255, 0.5);
+}
+
+/* =========================================
+   SECTION
+   ========================================= */
+
+.section {
+    padding: 80px 0;
+
+    border-top: 1px solid rgba(27, 53, 72, 0.7);
+}
+
+.section-light {
+    background: rgba(16, 26, 39, 0.75);
+}
+
+.section h2 {
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-size: 2rem;
+
+    color: var(--cyan);
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 10px rgba(0, 229, 255, 0.4);
+}
+
+.section p {
+    color: var(--text-muted);
+
+    max-width: 850px;
+
+    margin: 0 auto 15px;
+
+    text-align: center;
+}
+
+/* =========================================
+   COURSE GRID
+   ========================================= */
+
+.course-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.course-card {
+    position: relative;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0e1723,
+            #080e16
+        );
+
+    border: 1px solid var(--border);
+
+    transition: 0.35s ease;
+
+    overflow: hidden;
+}
+
+/* Garis dekorasi robotik */
+.course-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+    height: 0;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 15px var(--cyan);
+
+    transition: 0.35s ease;
+}
+
+.course-card:hover::before {
+    height: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+
+    border-color: var(--cyan);
+
+    box-shadow:
+        0 0 25px rgba(0, 229, 255, 0.15);
+}
+
+.course-card h3 {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 1.3rem;
+
+    letter-spacing: 1px;
+}
+
+.course-card h3::before {
+    content: "[+] ";
+
+    color: var(--green);
+}
+
+.course-card p {
+    text-align: left;
+
+    margin: 0;
+
+    color: var(--text-muted);
+}
+
+/* =========================================
+   TENTANG
+   ========================================= */
+
+#tentang a {
+    display: block;
+
+    width: fit-content;
+
+    margin: 30px auto 0;
+
+    padding: 11px 24px;
+
+    border: 1px solid var(--blue);
+
+    color: var(--blue);
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+#tentang a:hover {
+    background: var(--blue);
+
+    color: white;
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.6);
+}
+
+/* =========================================
+   VIDEO
+   ========================================= */
+
+.video-placeholder {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    background: #080e16;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        inset 0 0 30px rgba(0, 229, 255, 0.04);
+}
+
+.video-placeholder iframe {
+    max-width: 100%;
+
+    border: 1px solid var(--cyan);
+
+    box-shadow:
+        0 0 25px rgba(0, 229, 255, 0.2);
+}
+
+/* =========================================
+   KONTAK
+   ========================================= */
+
+#kontak p {
+    color: var(--text-muted);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.footer {
+    padding: 30px 0;
+
+    text-align: center;
+
+    background: #04070b;
+
+    border-top: 1px solid var(--border);
+
+    color: #66808f;
+
+    font-size: 0.9rem;
+
+    letter-spacing: 1px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image {
+        max-width: 400px;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 30px 0;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+
+        letter-spacing: 3px;
+    }
+
+    .header p {
+        font-size: 0.8rem;
+    }
+
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        padding: 12px 10px;
+
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    .video-placeholder {
+        padding: 15px;
+    }
+
+    .video-placeholder iframe {
+        width: 100%;
+
+        height: 500px;
+    }
+
+}
+
+/* =========================================
+   SCROLLBAR ROBOTIC
+   ========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #05080d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #12445b;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 10px var(--cyan);
+}
+
+/* =========================================
+   TEXT SELECTION
+   ========================================= */
+
+::selection {
+    background: var(--cyan);
+
+    color: #001018;
+}
