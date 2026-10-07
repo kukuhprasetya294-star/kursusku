@@ -24,7 +24,7 @@
         <p>Gunakan data latihan. Field bertanda wajib harus diisi.</p>
     </section>
     <section class="form-card">
-        <form action="process-registration.php" method="GET" class="registration-form">
+        <form action="process-registration.php" method="POST" class="registration-form">
             <input type="hidden" name="source" value="week-05">
             <div class="form-grid">
                 <div class="form-group">
