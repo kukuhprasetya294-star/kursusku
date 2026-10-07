@@ -1,0 +1,19 @@
+====================================================================================================
+                       MATRIKS PENGUJIAN FITUR PENDAFTARAN & KARTU RINGKASAN
+                                    PROYEK KURSUSKU (WEEK 06)
+====================================================================================================
+
+No | Skenario Pengujian             | Langkah-Langkah & Input Data             | Ekspektasi Hasil                     | Status
+---|--------------------------------|------------------------------------------|--------------------------------------|-------
+1  | Form Pendaftaran Lengkap       | Mengisi seluruh input wajib & opsional.   | Berhasil submit ke ringkasan.        | LULUS
+2  | Perhitungan Diskon Mahasiswa   | Pilih tipe: Mahasiswa pada form.        | Diskon 20% terpotong dari subtotal.  | LULUS
+3  | Perhitungan Diskon Guru        | Pilih tipe: Guru pada form.             | Diskon 15% terpotong dari subtotal.  | LULUS
+4  | Pilihan Beberapa Minat         | Centang 2+ checkbox minat (UI/UX, Backend) | Tampil sebagai Badge Pill terpisah. | LULUS
+5  | Pilihan Minat Kosong           | Tidak mencentang checkbox minat apapun.   | Tampil pesan 'Tidak ada minat dipilih'| LULUS
+6  | Riwayat Pendaftaran Dummy      | Klik tombol 'Lihat History Dummy'.       | Mengarah ke tabel history-dummy.php. | LULUS
+7  | Validasi Form HTML5            | Mencoba submit form dalam kondisi kosong.| Browser menahan proses pengiriman.   | LULUS
+
+====================================================================================================
+Kesimpulan: Seluruh fungsionalitas form pendaftaran, logika perhitungan diskon dinamis, 
+pencetakan badge minat, dan navigasi halaman riwayat dummy telah berfungsi 100% LULUS.
+====================================================================================================
