@@ -1,0 +1,12 @@
+PERBANDINGAN LOCAL DEVELOPMENT VS HOSTING / PRODUCTION
+
+Aspek             | Local Development                | Hosting / Production
+------------------+----------------------------------+----------------------------------
+URL               | kursusku-ku.test / localhost     | Domain/subdomain publik
+Lokasi File       | Laptop / Komputer Lokal          | Server Hosting
+Database          | MySQL Lokal Laragon              | Server Database Hosting
+Environment       | Development                      | Production
+HTTPS/SSL         | Tidak selalu tersedia            | Seharusnya HTTPS aktif
+Debug             | Boleh menampilkan error detail   | Error sensitif disembunyikan
+Secret            | Disimpan lokal                   | Environment Variable (konfigurasi server)
+Document Root     | Folder proyek di Laragon         | Folder web (misal: public)
