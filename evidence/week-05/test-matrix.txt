@@ -1,0 +1,13 @@
+Pertemuan 5 - Test Matrix
+01 Load form: PASS - registration.php tampil tanpa error.
+02 Required: PASS - browser menahan field wajib.
+03 Email: PASS - type=email memeriksa format.
+04 Nama pendek: PASS - minlength=3.
+05 GET: PASS - parameter terlihat pada query string.
+06 POST: PASS - data tidak tampil sebagai query string.
+07 Radio: PASS - participant_type diterima.
+08 Checkbox: PASS - beberapa interests[] diterima.
+09 Textarea: PASS - catatan ditampilkan kembali dengan escaping.
+10 Hidden: PASS - source=week-05 diterima.
+11 Mobile: PASS - form satu kolom sekitar 360px.
+12 Navigasi: PASS - beranda/form/katalog dapat diakses.

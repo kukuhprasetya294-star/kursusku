@@ -1,0 +1,19 @@
+KursusKu - Perbandingan Local Development vs Hosting/Production
+
+Aspek            | Local Development                         | Hosting / Production
+URL              | kursusku-prototype.test / localhost      | domain/subdomain publik
+Lokasi file      | C:\laragon\www\kursusku-prototype       | document root provider/server
+Database         | MySQL lokal Laragon (jika digunakan)     | database server hosting
+Environment      | development                               | production
+HTTPS/SSL        | tidak selalu tersedia                     | seharusnya aktif
+Debug            | boleh membantu proses belajar             | jangan tampilkan error sensitif
+Secret           | lokal, tidak dibagikan                    | konfigurasi server yang aman
+Document root    | folder proyek Laragon                     | folder web yang ditentukan provider
+
+Checklist:
+- path aset relatif;
+- tidak ada password/API key di source code;
+- link internal dan aset diuji;
+- mobile diuji;
+- POST bukan enkripsi, HTTPS tetap diperlukan;
+- gunakan data latihan, bukan data pribadi nyata.
