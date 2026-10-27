@@ -1,0 +1,9 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    background: #f7f8fa;
+}
+
+.navbar-brand {
+    font-weight: 800;
+}

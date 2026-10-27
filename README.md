@@ -1,17 +1,29 @@
-# Proyek KursusKu Prototype
+# Kursusku
+Project praktikum Pemrograman Web III.
 
-Repository ini berisi tugas praktikum Mata Kuliah Pemrograman Web III (PHP & MySQL).
+## Requirement
+- PHP 8.3 atau lebih baru
+- Composer
+- Laravel
+- Laragon / web server lokal
 
-## Rumus Bisnis Kalkulator Biaya (Week 3)
-- **Subtotal** = `fee` * `participantCount`
-- **Diskon** = `subtotal` * `discountPercent` / 100
-- **Total Akhir** = `subtotal` - `diskon` + `adminFee`
+## Cara Menjalankan
+1. Buka terminal pada folder project.
+2. Jalankan: composer install
+3. Salin .env.example menjadi .env jika diperlukan.
+4. Jalankan: php artisan key:generate
+5. Jalankan: php artisan serve
+6. Buka alamat yang ditampilkan terminal (http://127.0.0.1:8000).
 
-## Fitur Unggulan (Week 4)
-1. Tabel katalog dinamis berisi 6 data kursus via array PHP.
-2. Fungsi Reusable (`helpers.php`):
-   - `rupiah()`
-   - `statusKursus()`
-   - `sisaKursi()`
-   - `formatTanggal()`
-3. Pengujian fungsi di `test-functions.php` dengan 6 pengujian PASS.
+## Fitur Milestone 7
+- Named route `home`
+- `HomeController@index`
+- Blade landing page (`home.blade.php`)
+- Data kursus dari controller
+- Asset CSS dan image
+
+## Belum Dikerjakan
+- Database
+- CRUD
+- Authentication
+- Relasi data

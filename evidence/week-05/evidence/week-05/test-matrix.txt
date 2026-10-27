@@ -1,0 +1,16 @@
+TEST MATRIX PERTEMUAN 5 - KURSUSKU PROTOTYPE
+
+No | Pengujian   | Hasil Diharapkan                  | Status | Catatan
+---+-------------+-----------------------------------+--------+-----------------------------------
+1  | Load Form   | registration.php tampil normal    | Lulus  | Berhasil dimuat tanpa error
+2  | Required    | Browser menahan submit data kosong| Lulus  | Validasi browser aktif
+3  | Email       | Meminta format email valid        | Lulus  | Menolak input tanpa format email
+4  | Minlength   | Menolak nama < 3 karakter         | Lulus  | Pesan peringatan minlength tampil
+5  | Method GET  | Data tampil di query string URL   | Lulus  | Eksperimen berhasil dicatat
+6  | Method POST | Data dikirim lewat request body   | Lulus  | Data tidak bocor di URL
+7  | Radio       | Nilai jenis peserta terpilih      | Lulus  | Data mahasiswa/umum tampil tepat
+8  | Checkbox    | Menggabungkan array minat         | Lulus  | Terhubung dengan koma
+9  | Textarea    | Catatan opsi dikirim aman        | Lulus  | Di-escape dengan htmlspecialchars
+10 | Hidden      | Key 'source' dikirim otomatis     | Lulus  | Menerima value 'week-05'
+11 | Mobile UI   | Form 1 kolom pada layar HP        | Lulus  | Tampilan responsif bekerja
+12 | Navigasi    | Link Beranda-Katalog-Daftar aktif | Lulus  | Semua tautan berfungsi
