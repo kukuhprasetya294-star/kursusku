@@ -1,70 +1,27 @@
 <?php
+// helpers.php - Fungsi Pembantu
 
-declare(strict_types=1);
-
-function rupiah(int $amount): string
-{
-    return 'Rp ' . number_format($amount, 0, ',', '.');
-}
-
-function formatRupiah(int $amount): string
-{
-    return rupiah($amount);
-}
-
-function statusKursus(int $quota, int $registered): string
-{
-    return $registered >= $quota ? 'Penuh' : 'Tersedia';
-}
-
-function sisaKursi(int $quota, int $registered): int
-{
-    return max(0, $quota - $registered);
-}
-
-function formatTanggal(string $date): string
-{
-    $value = new DateTimeImmutable($date);
-    return $value->format('d-m-Y');
-}
-
-function e(mixed $value): string
-{
-    return htmlspecialchars((string) $value, ENT_QUOTES, 'UTF-8');
-}
-
-function findCourse(array $courses, string $code): ?array
-{
-    foreach ($courses as $course) {
-        if (($course['code'] ?? '') === $code) {
-            return $course;
-        }
+if (!function_exists('rupiah')) {
+    function rupiah($angka) {
+        return 'Rp ' . number_format($angka, 0, ',', '.');
     }
-
-    return null;
 }
 
-function getDiscountPercent(string $participantType): int
-{
-    if ($participantType === 'mahasiswa') {
-        return 20;
-    } elseif ($participantType === 'guru') {
-        return 15;
+if (!function_exists('formatTanggal')) {
+    function formatTanggal($tanggal) {
+        return date('d M Y', strtotime($tanggal));
     }
-
-    return 0;
 }
 
-function getLearningModeLabel(string $mode): string
-{
-    switch ($mode) {
-        case 'offline':
-            return 'Tatap Muka';
-        case 'online':
-            return 'Online';
-        case 'hybrid':
-            return 'Hybrid';
-        default:
-            return 'Tidak diketahui';
+if (!function_exists('statusKursus')) {
+    function statusKursus($quota, $registered) {
+        return ($registered >= $quota) ? 'Penuh' : 'Tersedia';
+    }
+}
+
+if (!function_exists('sisaKursi')) {
+    function sisaKursi($quota, $registered) {
+        $sisa = $quota - $registered;
+        return ($sisa > 0) ? $sisa : 0;
     }
 }
